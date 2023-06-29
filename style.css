@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("fonts/PlusJakartaSans-Medium.woff2") format("woff2"),
+    url("fonts/PlusJakartaSans-Medium.woff") format("woff"),
+    url("fonts/PlusJakartaSans-Medium.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    src: url("fonts/PlusJakartaSans-ExtraBold.woff2") format("woff2"),
+    url("fonts/PlusJakartaSans-ExtraBold.woff") format("woff"),
+    url("fonts/PlusJakartaSans-ExtraBold.ttf") format("ttf");
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3 {
+    word-break: break-word;
+}
+
+:root {
+    --primary-color: hsl(219, 85%, 26%);
+    --secondary-color: hsl(1, 90%, 64%);
+    --neutral-dark: hsl(224, 21%, 14%);
+    --neutral-dark-300: hsl(219, 12%, 42%);
+    --neutral-dark-200: hsl(219, 14%, 63%);
+    --neutral-light: hsl(210, 60%, 98%);
+    --neutral-light-600: hsl(211, 68%, 94%);
+    --neutral-light-700: hsl(205, 33%, 90%);
+    --profile-img-size: 5.5rem;
+
+    font-size: 62.5%;
+    background-color: var(--neutral-light);
+
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--neutral-dark-300);
+}
+
+h1, h2, h3{
+    font-weight: 800;
+    color: var(--neutral-dark);
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+.notification {
+    padding: 2em 1.2em;
+    background-color: #ffffff;
+}
+
+.notification__header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+
+.notification__number-unread{
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 0.2em 0.59em 0.25em;
+    border-radius: 0.5rem;
+}
+
+.notification__mark-all{
+    margin-left: auto;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+    transition: color 0.3s;
+}
+
+.notification__mark-all:active{
+    color: var(--primary-color);
+}
+
+.notification__mark-all:focus-visible{
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.notification__list{
+    display: flex;
+    flex-direction: column;gap: 1.5rem;
+    list-style-type: none;
+    padding: 2.5em 0 0;
+}
+
+.notification__item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    cursor: pointer;
+    padding: 0.75em 1em;
+}
+
+.notification__item--unread{
+    background-color: var(--neutral-light);
+    transition: background-color 0.3s;
+}
+
+.notification__info{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.notification__img-profile{
+    width: var(--profile-img-size) ;
+    height: var(--profile-img-size);
+}
+
+.notification__img-post{
+    width: 5rem;
+    height: 5rem;
+    margin-left: auto;
+}
+
+.notification__details-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.notification__details > *{
+    padding-right: 0.5rem;
+}
+
+
+.notification__name,
+.notification__action,
+.notification__post,
+.notification__group{
+    display: inline ;
+}
+
+
+
+.notification__post{
+    color: var(--neutral-dark-300);
+}
+.notification__group{
+    color: var(--primary-color);
+}
+
+.notification__new-msg-dot{
+    display: none;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.notification__new-msg-dot--show{
+    display: inline-block;
+}
+
+.notification__date{
+    color: var(--neutral-dark-200);
+}
+
+.notification__msg{
+    border: 1px solid var(--neutral-dark-200);
+    border-radius: 1rem;
+    margin-left: calc(var(--profile-img-size) + 1rem);
+    padding: 1em;
+    transition: background-color 0.3s;
+}
+
+@media (min-width: 48em) {
+    .notification{
+        width: 70%;
+        margin: 5rem auto;
+        border-radius: 2rem;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+}
+
+@media (min-width: 75em) {
+    .notification{
+        width: 50%;
+        max-width: 100rem;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .notification__mark-all:hover{
+        color: var(--primary-color);
+    }
+
+    .notification__item--unread:hover{
+        background-color: var(--neutral-light-600);
+    }
+
+    .notification__msg:hover{
+        background-color: var(--neutral-light-700);
+    }
+
+    .notification__name:hover{
+        color: var(--primary-color);
+    }
+}

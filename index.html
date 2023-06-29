@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imahes/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<main>
+    <div class="notification">
+        <div class="notification__header">
+            <h1 class="notification__title">Notifications</h1>
+            <h2 class="notification__number-unread" data-unread-number></h2>
+            <p class="notification__mark-all" data-mark-all tabindex="0">Mark all as read</p>
+        </div>
+        <ul class="notification__list">
+            <li class="notification__item notification__item--unread" data-item-unread>
+                <div class="notification__info">
+                    <img class="notification__img-profile" src="images/avatar-mark-webber.webp" alt="Profile">
+                    <div class="notification__details-container">
+                        <div class="notification__details">
+                            <h3 class="notification__name">Mark Webber</h3>
+                            <p class="notification__action">reacted to your recent post</p>
+                            <h3 class="notification__post" data-optional>My first tournament today!</h3>
+                            <h3 class="notification__group" data-optional></h3>
+                            <div class="notification__new-msg-dot" data-new-msg-dot></div>
+                        </div>
+                        <p class="notification__date">1m ago</p>
+                    </div>
+                    <img class="notification__img-post" data-img-post src="data:," alt="Post">
+                </div>
+                <p class="notification__msg" data-optional>
+                </p>
+            </li>
+            <li class="notification__item notification__item--unread" data-item-unread>
+                <div class="notification__info">
+                    <img class="notification__img-profile" src="images/avatar-angela-gray.webp" alt="Profile">
+                    <div class="notification__details-container">
+                        <div class="notification__details">
+                            <h3 class="notification__name">Angela Gray</h3>
+                            <p class="notification__action">followed you</p>
+                            <h3 class="notification__post" data-optional></h3>
+                            <h3 class="notification__group" data-optional></h3>
+                            <div class="notification__new-msg-dot" data-new-msg-dot></div>
+                        </div>
+                        <p class="notification__date">5m ago</p>
+                    </div>
+                    <img class="notification__img-post" data-img-post src="data:," alt="Post">
+                </div>
+                <p class="notification__msg" data-optional>
+                </p>
+            </li>
+            <li class="notification__item notification__item--unread" data-item-unread>
+                <div class="notification__info">
+                    <img class="notification__img-profile" src="images/avatar-jacob-thompson.webp" alt="Profile">
+                    <div class="notification__details-container">
+                        <div class="notification__details">
+                            <h3 class="notification__name">Jacob Thompson</h3>
+                            <p class="notification__action">has joined your group</p>
+                            <h3 class="notification__post" data-optional></h3>
+                            <h3 class="notification__group" data-optional>Chess Club</h3>
+                            <div class="notification__new-msg-dot" data-new-msg-dot></div>
+                        </div>
+                        <p class="notification__date">1 day ago</p>
+                    </div>
+                    <img class="notification__img-post" data-img-post src="data:," alt="Post">
+                </div>
+                <p class="notification__msg" data-optional>
+                </p>
+            </li>
+            <li class="notification__item">
+                <div class="notification__info">
+                    <img class="notification__img-profile" src="images/avatar-rizky-hasanuddin.webp" alt="Profile">
+                    <div class="notification__details-container">
+                        <div class="notification__details">
+                            <h3 class="notification__name">Rizky Hasanuddin</h3>
+                            <p class="notification__action">sent you a private message</p>
+                            <h3 class="notification__post" data-optional></h3>
+                            <h3 class="notification__group" data-optional></h3>
+                            <div class="notification__new-msg-dot" data-new-msg-dot></div>
+                        </div>
+                        <p class="notification__date">5 days ago</p>
+                    </div>
+                    <img class="notification__img-post" data-img-post src="data:," alt="Post">
+                </div>
+                <p class="notification__msg" data-optional>
+                    Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+                    I'm already having lots of fun and improving my game.
+                </p>
+            </li>
+            <li class="notification__item">
+                <div class="notification__info">
+                    <img class="notification__img-profile" src="images/avatar-kimberly-smith.webp" alt="Profile">
+                    <div class="notification__details-container">
+                        <div class="notification__details">
+                            <h3 class="notification__name">Kimberly Smith</h3>
+                            <p class="notification__action">commented on your picture</p>
+                            <h3 class="notification__post" data-optional></h3>
+                            <h3 class="notification__group" data-optional></h3>
+                            <div class="notification__new-msg-dot" data-new-msg-dot></div>
+                        </div>
+                        <p class="notification__date">1 week ago</p>
+                    </div>
+                    <img class="notification__img-post" data-img-post src="images/image-chess.webp" alt="Post">
+                </div>
+                <p class="notification__msg" data-optional></p>
+            </li>
+            <li class="notification__item">
+                <div class="notification__info">
+                    <img class="notification__img-profile" src="images/avatar-nathan-peterson.webp" alt="Profile">
+                    <div class="notification__details-container">
+                        <div class="notification__details">
+                            <h3 class="notification__name">Nathan Peterson</h3>
+                            <p class="notification__action">reacted to your recent post</p>
+                            <h3 class="notification__post" data-optional>5 end-game strategies to increase your win rate</h3>
+                            <h3 class="notification__group" data-optional></h3>
+                            <div class="notification__new-msg-dot" data-new-msg-dot></div>
+                        </div>
+                        <p class="notification__date">2 weeks ago</p>
+                    </div>
+                    <img class="notification__img-post" data-img-post src="data:," alt="Post">
+                </div>
+                <p class="notification__msg" data-optional></p>
+            </li>
+            <li class="notification__item">
+                <div class="notification__info">
+                    <img class="notification__img-profile" src="images/avatar-anna-kim.webp" alt="Profile">
+                    <div class="notification__details-container">
+                        <div class="notification__details">
+                            <h3 class="notification__name">Anna Kim</h3>
+                            <p class="notification__action">left the group</p>
+                            <h3 class="notification__post" data-optional></h3>
+                            <h3 class="notification__group" data-optional>Chess Club</h3>
+                            <div class="notification__new-msg-dot" data-new-msg-dot></div>
+                        </div>
+                        <p class="notification__date">2 weeks ago</p>
+                    </div>
+                    <img class="notification__img-post" data-img-post src="data:," alt="Post">
+                </div>
+                <p class="notification__msg" data-optional></p>
+            </li>
+        </ul>
+    </div>
+</main>
+
+</body>
+</html>
